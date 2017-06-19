@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+int sendmail(const char *hamido@tmsk.uitm.edu.my, const char *wanzackshley@gmail.com, const char *test, const char *Test)
+{
+	int retval = -1;
+	FILE mailpipe = popen("Desktop\fp -t","w");//mailpipe to handle parsing and formatting email
+	if (mailpipe != NULL){
+		fprintf(mailpipe, "To: %\n", hamido@tmsk.uitm.edu.my); // receiver
+		fprintf(mailpipe, "From: %s\n", wanzackashley@gmail.com); // sender
+		fprinf(mailpipe, "Subject: %s\n\n", Test); // subject
+		fwrite(message, 1, strlen(message), mailpipe);
+		fwrite(".\n", 1, 2, mailpipe);
+		pclose(mailpipe);
+		retval = 0;
+
+		}
+			perror("failed to invoke sendmail"); // if email cannot send to the receiver
+		}
+		return retval;
+	}
+	main(int argc, char** argv)
+	{
+		int i;
+		printf(argc = %d\n", argc);
+
+		for(i=0; i < argc; itt)
+			printf("argv[%d] = \"%s\"\n", i, argv[i]);
+		sendmail(argv[1], argv[2], argv[3], argv[4]);
+}
